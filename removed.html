@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removed from Queue</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="top-bar">
+        <img src="logo.png" alt="Website Logo">
+        <span>Virtual Queue System</span>
+    </div>
+    <div id="container">
+        <div id="removed" class="page active">
+            <h1>Removed from Queue</h1>
+            <p>You were removed from the queue by the organization.
+                You may try again to join the queue.
+            </p>
+            <button id="return-home">Return Home</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('return-home').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

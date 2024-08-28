@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="top-bar">
+        <img src="logo.png" alt="Website Logo">
+        <span>Virtual Queue System</span>
+    </div>
+    <div id="container">
+        <div id="thank-you" class="page active">
+            <h1>Thank You!</h1>
+            <p>Thank you for using our service. Visit again!</p>
+            <button id="return-home">Return Home</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('return-home').addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

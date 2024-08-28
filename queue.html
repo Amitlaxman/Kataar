@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Status</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .position-box {
+            background-color: #57722E;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            font-size: 48px;
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #leave-queue {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #57722E;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #leave-queue:hover {
+            background-color: #465d24;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="top-bar">
+        <img src="logo.png" alt="Website Logo">
+        Virtual Queue System
+    </div>
+    <div id="container">
+        <h1>Queue status for</h1>
+        <h2 id="user-name"></h2>
+        <div class="position-box">
+            Your position in queue: <span id="queue-position">1</span>
+        </div>
+        <button id="leave-queue">Leave Queue</button>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userName = localStorage.getItem('userName') || 'User';
+            document.getElementById('user-name').textContent = userName;
+
+            // Update queue position dynamically
+            const queuePosition = localStorage.getItem('queuePosition') || '1';
+            document.getElementById('queue-position').textContent = queuePosition;
+
+            document.getElementById('leave-queue').addEventListener('click', () => {
+                localStorage.removeItem('userName');
+                localStorage.removeItem('queuePosition');
+                window.location.href = 'thankyou.html';
+            });
+        });
+    </script>
+    <script>
+        import { initializeApp } from "firebase/app";
+        import { getAnalytics } from "firebase/analytics";
+        const firebaseConfig = {
+        apiKey: "AIzaSyDxQrydR8u69TZL4Hl09lYwB1bgyRzs_WQ",
+        authDomain: "kataar-69.firebaseapp.com",
+        databaseURL: "https://kataar-69-default-rtdb.firebaseio.com",
+        projectId: "kataar-69",
+        storageBucket: "kataar-69.appspot.com",
+        messagingSenderId: "624433221651",
+        appId: "1:624433221651:web:97cb03c7f698999a73afe6",
+        measurementId: "G-RJ1DP6NCCM"
+};
+
+// Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+</body>
+</html>

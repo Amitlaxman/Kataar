@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Queue</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background-color: #F1EEDC;
+        }
+
+        #top-bar {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            width: 100%;
+            background-color: #57722E;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #top-bar img {
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .container {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            margin: auto
+        }
+
+        h1 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #57722E;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        form {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 15px;
+        }
+
+        button {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #57722E;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #465d24;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="top-bar">
+        <img src="logo.png" alt="Website Logo">
+        Virtual Queue System
+    </div>
+    <div class="container">
+        <h1>Welcome to the Virtual Queue</h1>
+        <p>Please accept our <a href="terms.html" target="_blank">Terms and Conditions</a> to join the queue.</p>
+        <form action="name.html">
+            <label>
+                <input type="checkbox" required> I accept the Terms and Conditions
+            </label>
+            <br>
+            <button type="submit">Proceed</button>
+        </form>
+    </div>
+</body>
+</html>
